@@ -8,9 +8,9 @@ const router = Router();
 dotenv.config();
 
 cloudinary.config({
-  cloud_name: process.env.VITE_CLOUD_NAME,
-  api_key: process.env.VITE_API_KEY,
-  api_secret: process.env.VITE_API_SECRET,
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET,
 });
 
 router.delete("/", async (req, res) => {
