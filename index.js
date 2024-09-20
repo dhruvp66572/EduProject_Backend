@@ -5,6 +5,9 @@ const helmet = require("helmet");
 const morgan = require("morgan");
 const cookieparser = require("cookie-parser");
 const routes = require("./router.js");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const port = process.env.PORT || 4000;
 const app = express();
@@ -28,7 +31,7 @@ app.use(
   )
 );
 
-mongoose.connect("mongodb://localhost:27017/EduProjectLog");
+mongoose.connect(process.env.MONGO_CONNECTION);
 
 app.listen(port, () => {
   console.log(`Worker ${process.pid} is listening on port ${port}`);
