@@ -4,7 +4,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const cookieparser = require("cookie-parser");
-const routes = require("./router.js");
+// const routes = require("./router.js");
 const dotenv = require("dotenv");
 
 dotenv.config();
@@ -13,13 +13,13 @@ const port = process.env.PORT || 4000;
 const app = express();
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: ["http://localhost:4000", "http://localhost:5173"],
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: ["http://localhost:4000", "http://localhost:5173"],
+//     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//     credentials: true,
+//   })
+// );
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(cookieparser());
@@ -44,8 +44,8 @@ app.get("/", (req, res) => {
     `<h1>Welcome to EduProjectLog API</h1><p>Worker ${process.pid} is listening on port ${port}</p>`
   );
 
-  process.on("unhandledRejection", (reason, p) => {
-    console.log("Unhandled Rejection at: Promise", p, "reason:", reason);
-    // application specific logging, throwing an error, or other logic here
-  });
+  // process.on("unhandledRejection", (reason, p) => {
+  //   console.log("Unhandled Rejection at: Promise", p, "reason:", reason);
+  //   // application specific logging, throwing an error, or other logic here
+  // });
 });
