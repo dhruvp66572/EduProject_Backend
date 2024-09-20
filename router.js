@@ -1,6 +1,6 @@
-const user_api = require("./API/user_route.js");
-const project_collection_route = require("./API/project_collection_route.js");
-const cloudinaryDelete = require("./API/CloudinaryDelete.js");
+const user_api = require("./user_route.js");
+const project_collection_route = require("./project_collection_route.js");
+const cloudinaryDelete = require("./CloudinaryDelete.js");
 
 function routes(app) {
     

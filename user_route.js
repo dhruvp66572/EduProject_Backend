@@ -8,7 +8,7 @@ const {
   updateUser,
   deleteUser,
   signIn,
-} = require("../API/Handlers/User");
+} = require("./Handlers/User");
 
 
 const router = Router();
