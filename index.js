@@ -4,7 +4,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const cookieparser = require("cookie-parser");
-// const routes = require("./router.js");
+const routes = require("./router.js");
 const dotenv = require("dotenv");
 
 dotenv.config();
@@ -39,13 +39,13 @@ app.listen(port, () => {
   routes(app);
 });
 
-app.get("/", (req, res) => {
-  res.send(
-    `<h1>Welcome to EduProjectLog API</h1><p>Worker ${process.pid} is listening on port ${port}</p>`
-  );
+// app.get("/", (req, res) => {
+//   res.send(
+//     `<h1>Welcome to EduProjectLog API</h1><p>Worker ${process.pid} is listening on port ${port}</p>`
+//   );
 
-  // process.on("unhandledRejection", (reason, p) => {
-  //   console.log("Unhandled Rejection at: Promise", p, "reason:", reason);
-  //   // application specific logging, throwing an error, or other logic here
-  // });
-});
+//   // process.on("unhandledRejection", (reason, p) => {
+//   //   console.log("Unhandled Rejection at: Promise", p, "reason:", reason);
+//   //   // application specific logging, throwing an error, or other logic here
+//   // });
+// });
