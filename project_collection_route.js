@@ -1,14 +1,14 @@
 const { Router } = require("express");
 const { body } = require("express-validator");
-// const { inputErrorHandler } = require("../API/Module/middleware");
-const { protect } = require("../API/Module/auth");
+// const { inputErrorHandler } = require("./Module/middleware");
+const { protect } = require("./Module/auth");
 const {
   getAllProjects,
   getoneProject,
   createProject,
   updateProject,
   deleteProject,
-} = require("../API/Handlers/Project");
+} = require("./Handlers/Project");
 
 const router = Router();
 

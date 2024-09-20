@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const { body } = require("express-validator");
-// const { inputErrorHandler } = require("../API/Module/middleware");
+// const { inputErrorHandler } = require("./Module/middleware");
 const {
   getAllUser,
   getOneUser,
